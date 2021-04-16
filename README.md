@@ -62,10 +62,14 @@ ng g m moduleName
 ng g c componentName --skip-tests -is
 ng g pipe pipeName   --skip-tests
 ng g s app/services/app --skip-tests
-ng g guard auth/guards/auth --skip-tests
+```
+```
+ng g guard auth/guards/auth --skip-tests  
+--> Which interfaces implement? (*)CanActiva, (*)CanLoad
+```
+```
 ng g m --help --> give you all tips you need!
 eg.: ng g m template --routing
---> Which interfaces implement? (*)CanActiva, (*)CanLoad
 ```
 `--skip-tests` skip test generation -  `-is` skip styles (css) generation
 
@@ -202,9 +206,14 @@ In function make http GET and then subscript, eg.:
       })  
 ```
 
-## Pipes
+## Pipes  
 https://angular.io/api?query=pipe
 
+## Forms  
+### Template forms  
+#### the form is more in the html part (more simple less control)  
+### Reactive forms  
+#### the form is more in the component part (more complex more control)  
 
 
 ---

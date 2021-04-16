@@ -10,13 +10,8 @@
             
             <!-- Campo de producto -->
             <div class="mb-3 row">
-
-
                 <label class="col-sm-3 col-form-label">Producto</label>
-
-
                 <div class="col-sm-9">
-                    
                     <input type="text"
                            class="form-control"
                            [ngModel]="initForm.producto"
@@ -24,7 +19,6 @@
                            placeholder="Nombre del producto"
                            required
                            minlength="3">
-
                     <span class="form-text text-danger"
                         *ngIf="nombreValido()">
                         Debe de ser de 3 letras
@@ -32,13 +26,7 @@
                 </div>
             </div>
 
-
-
-
-
-
-
-            <!-- Campo de producto -->
+            <!-- Campo de precio -->
             <div class="mb-3 row">
                 <label class="col-sm-3 col-form-label">Precio</label>
                 <div class="col-sm-9">
@@ -82,8 +70,6 @@
                 </div>
             </div>
 
-
-
         </form>
 
     </div>
@@ -95,16 +81,16 @@
 <div class="row">
     <div class="col">
 
-        <span>Valid</span>
+        <span>miFormulario.valid:</span>
         <pre>{{ miFormulario.valid }}</pre>
 
-        <span>Pristine</span>
+        <span>miFormulario.pristine:</span>
         <pre>{{ miFormulario.pristine }}</pre>
 
-        <span>Touched</span>
+        <span>miFormulario.touched:</span>
         <pre>{{ miFormulario.touched }}</pre>
 
-        <span>Value</span>
+        <span>miFormulario.value:</span>
         <pre>{{ miFormulario.value | json }}</pre>
 
         <span>CustomDirective</span>
