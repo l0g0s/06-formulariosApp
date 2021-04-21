@@ -21,7 +21,7 @@ export class BasicosComponent implements OnInit {
     existencias: [ , [Validators.required,Validators.min(0)]       ],
   }) 
 
-  constructor( private fb: FormBuilder) { }
+  constructor( private fb: FormBuilder) {}
 
   ngOnInit(){
     this.miFormulario.reset({

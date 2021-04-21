@@ -31,9 +31,11 @@ export class DinamicosComponent {
   }
 
   agregarJuego() {
+    if(!this.nuevoJuego.trim().length) return
+
     const nuevoFavorito: Favorito = {
       id: this.persona.favoritos.length + 1,
-      nombre: this.nuevoJuego
+      nombre: this.nuevoJuego.trim()
     }
 
     this.persona.favoritos.push({ ...nuevoFavorito });
@@ -43,7 +45,6 @@ export class DinamicosComponent {
   eliminar( index: number ) {
     this.persona.favoritos.splice(index, 1);
   }
-
 
   guardar() {
     console.log('formulario posteado');

@@ -214,7 +214,8 @@ https://angular.io/api?query=pipe
 #### the form is more in the html part (more simple less control)  
 ### Reactive forms  
 #### the form is more in the component part (more complex more control)  
-
+https://angular.io/guide/reactive-forms  
+https://angular.io/guide/reactive-forms?search=reactive  
 
 ---
 
