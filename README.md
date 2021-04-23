@@ -62,6 +62,11 @@ ng g m moduleName
 ng g c componentName --skip-tests -is
 ng g pipe pipeName   --skip-tests
 ng g s app/services/app --skip-tests
+eg:
+ng g c auth/pages/registro --skip-tests -is
+CREATE src/app/auth/pages/registro/registro.component.html (23 bytes)
+CREATE src/app/auth/pages/registro/registro.component.ts (257 bytes)
+UPDATE src/app/auth/auth.module.ts (362 bytes)
 ```
 ```
 ng g guard auth/guards/auth --skip-tests  
@@ -70,6 +75,8 @@ ng g guard auth/guards/auth --skip-tests
 ```
 ng g m --help --> give you all tips you need!
 eg.: ng g m template --routing
+CREATE src/app/template/template-routing.module.ts
+CREATE src/app/template/template.module.ts
 ```
 `--skip-tests` skip test generation -  `-is` skip styles (css) generation
 
@@ -87,14 +94,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ---
 
-# Angular
+# Angular 
 
 ## html - data flow:
 ` [xxx] ` one way exclusive from back to front - eg.`[name]`   
 ` (xxx) ` one way exclusive from front to back - eg.`(click)`  
 `[(xxx)]` two way in-out - eg. `<input type="text" name="termino" [(ngModel)]="termino" placeholder="Buscar..."/>`
 
-## input - recibe from other component
+## input - recibe from other component  
 eg.: send to countries-table component listOfCountries by input:    
 set in countries-table.component.ts:  
 `@Input() countries: Country[] = []`  

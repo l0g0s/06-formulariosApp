@@ -49,5 +49,20 @@ export class SidemenuComponent {
     },
   ];
 
+  authMenu: MenuItem[] = [
+    {
+      texto: 'Básicos',
+      ruta: './reactive/basicos'
+    },
+    {
+      texto: 'Dinámicos',
+      ruta: './reactive/dinamicos'
+    },
+    {
+      texto: 'Switches',
+      ruta: './reactive/switches'
+    },
+  ];
+
 
 }
