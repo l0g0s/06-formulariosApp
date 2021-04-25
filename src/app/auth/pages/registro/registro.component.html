@@ -1,1 +1,110 @@
-<p>registro works!</p>
+<h2>Validaciones Reactivas</h2>
+<hr>
+<div class="row">
+    <div class="col">
+        <form (ngSubmit)="guardar()" autocomplete="off" [formGroup]="miFormulario">
+
+            <!-- Nombre -->
+            <div class="row mb-3">
+                <label for="" class="col-sm-3 col-form-label">Nombre</label>
+                <div class="col-sm-9">
+                    <input type="text"
+                           class="form-control"
+                           placeholder="Nombre del usuario"
+                           formControlName="nombre"
+                           >
+                    <span class="form-text text-danger"
+                    *ngIf="campoNoValido('nombre')">
+                        Debe de ser en formato de nombre y apellido
+                    </span><span>&nbsp;</span>
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div class="row mb-3">
+                <label for="" class="col-sm-3 col-form-label">Email</label>
+                <div class="col-sm-9">
+                    <input type="email"
+                           class="form-control"
+                           placeholder="Email del usuario"
+                           formControlName="email"
+                           >
+                    <span class="form-text text-danger"
+                    *ngIf="campoNoValido('email')">
+                        {{emailErrorSpan}}
+                    </span><span>&nbsp;</span>
+                </div>
+            </div> 
+
+            <!-- Username -->
+            <div class="row mb-3">
+                <label for="" class="col-sm-3 col-form-label">Username</label>
+                <div class="col-sm-9">
+                    <input type="email"
+                           class="form-control"
+                           placeholder="username"
+                           formControlName="username"
+                           >
+                    <span class="form-text text-danger"
+                    *ngIf="campoNoValido('username')">
+                        username no valido
+                    </span><span>&nbsp;</span>
+                </div>
+            </div>
+            
+            <!-- Password -->
+            <div class="row mb-3">
+                <label for="" class="col-sm-3 col-form-label">Contraseña</label>
+                <div class="col-sm-9">
+                    <input type="password"
+                           class="form-control"
+                           placeholder="Contraseña de su cuenta"
+                           formControlName="password"
+                           >
+                    <span class="form-text text-danger"
+                    *ngIf="campoNoValido('password')">
+                        La contraseña debe ser superior a 6 caracteres
+                    </span><span>&nbsp;</span>
+                </div>
+            </div>
+
+            <!-- Password2 -->
+            <div class="row mb-3">
+                <label for="" class="col-sm-3 col-form-label">Confirmar</label>
+                <div class="col-sm-9">
+                    <input type="password"
+                           class="form-control"
+                           placeholder="Repita su contraseña"
+                           formControlName="password2"
+                           >
+                    <span class="form-text text-danger"
+                    *ngIf="campoNoValido('password2')">
+                        Las contraseñas deben ser iguales
+                    </span><span>&nbsp;</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <button type="submit" 
+                            class="btn btn-primary float-end"
+                            [disabled]="miFormulario.pending"
+                            >
+                        Crear
+                    </button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<h5>Form Valid: {{miFormulario.valid}} - Status: {{miFormulario.status}}</h5>
+<h5 *ngIf="miFormulario.invalid">Errors:</h5>
+<pre *ngIf="miFormulario.errors!=null">form: {{ miFormulario.errors|json}}</pre>
+<pre *ngIf="miFormulario.controls.errors!=null">form controls: {{ miFormulario.errors|json}}</pre>
+<pre *ngIf="miFormulario.controls.nombre.errors!=null">nombre: {{ miFormulario.controls.nombre.errors | json }}</pre>
+<pre *ngIf="miFormulario.controls.username.errors!=null">username: {{ miFormulario.controls.username.errors | json }}</pre>
+<pre *ngIf="miFormulario.controls.email.errors!=null">email: {{ miFormulario.controls.email.errors | json }}</pre>
+<pre *ngIf="miFormulario.controls.password.errors!=null">password: {{ miFormulario.controls.password.errors | json }}</pre>
+<pre *ngIf="miFormulario.controls.password.errors!=null">password2: {{ miFormulario.controls.password.errors | json }}</pre>

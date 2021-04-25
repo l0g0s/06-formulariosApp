@@ -63,6 +63,7 @@ export class DinamicosComponent implements OnInit {
       this.miFormulario.markAllAsTouched()
       return
     }
+    console.log("guardado")
   }  
 
   agregarFavorito() {

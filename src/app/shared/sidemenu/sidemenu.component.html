@@ -1,3 +1,17 @@
+<h2>Selectors Paises</h2>
+<hr>
+
+<ul class="list-group">
+
+    <li *ngFor="let item of selectorMenu"
+        class="list-group-item"
+        [routerLink]="[ item.ruta ]"
+        routerLinkActive="active">
+        {{ item.texto }}
+    </li>
+
+</ul>
+
 <h2>Template</h2>
 <hr>
 

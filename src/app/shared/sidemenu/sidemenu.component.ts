@@ -19,6 +19,13 @@ interface MenuItem {
 })
 export class SidemenuComponent {
 
+  selectorMenu: MenuItem[] = [
+    {
+      texto: 'Selectors',
+      ruta: './selector'
+    },
+  ];
+
   templateMenu: MenuItem[] = [
     {
       texto: 'Básicos',
@@ -51,16 +58,12 @@ export class SidemenuComponent {
 
   authMenu: MenuItem[] = [
     {
-      texto: 'Básicos',
-      ruta: './reactive/basicos'
+      texto: 'Registro',
+      ruta: './auth/registro'
     },
     {
-      texto: 'Dinámicos',
-      ruta: './reactive/dinamicos'
-    },
-    {
-      texto: 'Switches',
-      ruta: './reactive/switches'
+      texto: 'Login',
+      ruta: './auth/login'
     },
   ];
 
