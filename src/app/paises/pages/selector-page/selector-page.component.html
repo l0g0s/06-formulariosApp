@@ -11,7 +11,7 @@
                     formControlName="region">
                 <option value=""> -- Seleccione Continente -- </option>
                 <option *ngFor="let region of regiones"
-                        [value]="region | lowercase"> {{ region }} </option>
+                        [value]="region | titlecase"> {{ region }} </option>
             </select>
         </div>
     </div>

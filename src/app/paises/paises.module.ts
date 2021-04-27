@@ -7,7 +7,9 @@ import { SelectorPageComponent } from './pages/selector-page/selector-page.compo
 
 
 @NgModule({
-  declarations: [SelectorPageComponent],
+  declarations: [
+    SelectorPageComponent
+  ],
   imports: [
     CommonModule,
     ReactiveFormsModule,

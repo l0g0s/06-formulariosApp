@@ -19,6 +19,13 @@ interface MenuItem {
 })
 export class SidemenuComponent {
 
+  lifecycleMenu: MenuItem[] = [
+    {
+      texto: 'LifeCycle',
+      ruta: './lifecycle'
+    },
+  ];
+
   selectorMenu: MenuItem[] = [
     {
       texto: 'Selectors',

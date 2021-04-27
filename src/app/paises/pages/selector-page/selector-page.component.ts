@@ -5,6 +5,7 @@ import { switchMap, tap } from 'rxjs/operators';
 
 import { PaisesService } from '../../services/paises.service';
 import { PaisSmall } from '../../interfaces/paises.interface';
+import { of } from 'rxjs';
 
 @Component({
   selector: 'app-selector-page',
@@ -21,9 +22,8 @@ export class SelectorPageComponent implements OnInit {
   })
 
   // Llenar selectores
-  regiones : string[]    = [];
+  regiones : string[]    = PaisesService.regiones;
   paises   : PaisSmall[] = [];
-  // fronteras: string[]    = []
   fronteras: PaisSmall[] = []
 
   // UI
@@ -35,37 +35,37 @@ export class SelectorPageComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.regiones = this.paisesService.regiones;
-
-
     // Cuando cambie la region
     this.miFormulario.get('region')?.valueChanges
       .pipe(
         tap( ( _ ) => {
           this.miFormulario.get('pais')?.reset('');
+          this.paises = []
           this.cargando = true;
         }),
         switchMap( region => this.paisesService.getPaisesPorRegion( region ) )
       )
       .subscribe( paises => {
-        this.paises = paises;
         this.cargando = false;
+        this.paises = paises;
     });
 
     // Cuando cambia el país
     this.miFormulario.get('pais')?.valueChanges
       .pipe(
         tap( () => {
-          this.miFormulario.get('frontera')?.reset('');
           this.cargando = true;
+          this.miFormulario.get('frontera')?.reset('');
+          this.fronteras = []
         }),
         switchMap( codigo => this.paisesService.getPaisPorCodigo( codigo ) ),
         switchMap( pais => this.paisesService.getPaisesPorCodigos( pais?.borders! ) )
       )
       .subscribe( paises => {
-        // this.fronteras = pais?.borders || [];
-        this.fronteras = paises;
+        console.log(paises)
         this.cargando = false;
+        console.log(paises)
+        this.fronteras = paises;
       })
 
   }

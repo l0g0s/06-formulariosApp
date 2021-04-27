@@ -336,3 +336,6 @@ start server:
 json-server --watch db.json  
 
 ## CRUD - Create Read Update Delete  
+
+## LifeCycle Hooks  
+https://angular.io/guide/lifecycle-hooks  

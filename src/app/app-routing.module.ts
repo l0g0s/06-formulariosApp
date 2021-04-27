@@ -3,6 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { 
+    path: 'lifecycle',
+    loadChildren: () => import('./lifecycle/lifecycle.module').then( m => m.LifecycleModule )
+  },
+  { 
     path: 'selector',
     loadChildren: () => import('./paises/paises.module').then( m => m.PaisesModule )
   },

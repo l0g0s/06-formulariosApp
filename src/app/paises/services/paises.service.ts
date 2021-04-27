@@ -10,12 +10,8 @@ import { PaisSmall, Pais } from '../interfaces/paises.interface';
 })
 export class PaisesService {
 
-  private baseUrl: string = 'https://restcountries.eu/rest/v2'
-  private _regiones: string[] = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
-
-  get regiones(): string[] {
-    return [ ...this._regiones ];
-  }
+  private readonly baseUrl: string = 'https://restcountries.eu/rest/v2'
+  public static readonly regiones: string[] = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
 
   constructor( private http: HttpClient ) { }
 
