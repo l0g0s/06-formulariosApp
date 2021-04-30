@@ -1,5 +1,14 @@
-<h2>Selectors Paises</h2>
-<hr>
+<h5 class="m-1">Mapas</h5>
+<ul class="list-group">
+    <li *ngFor="let item of mapasMenu"
+        class="list-group-item"
+        [routerLink]="[ item.ruta ]"
+        routerLinkActive="active">
+        {{ item.texto }}
+    </li>
+</ul>
+
+<h5 class="m-1">Selectors Paises</h5>
 <ul class="list-group">
     <li *ngFor="let item of lifecycleMenu"
         class="list-group-item"
@@ -9,8 +18,7 @@
     </li>
 </ul>
 
-<h2>Selectors Paises</h2>
-<hr>
+<h5 class="m-1">Selectors Paises</h5>
 <ul class="list-group">
     <li *ngFor="let item of selectorMenu"
         class="list-group-item"
@@ -20,8 +28,7 @@
     </li>
 </ul>
 
-<h2>Template</h2>
-<hr>
+<h5 class="m-1">Template</h5>
 <ul class="list-group">
     <li *ngFor="let item of templateMenu"
         class="list-group-item"
@@ -30,8 +37,8 @@
         {{ item.texto }}
     </li>
 </ul>
-<h2 class="mt-3">Reactive</h2>
-<hr>
+
+<h5 class="m-1">Reactive</h5>
 <ul class="list-group">
     <li *ngFor="let item of reactiveMenu"
         class="list-group-item"
@@ -40,8 +47,8 @@
         {{ item.texto }}
     </li>
 </ul>
-<h2 class="mt-3">Validaciones</h2>
-<hr>
+
+<h5 class="m-1">Validaciones</h5>
 <ul class="list-group">
     <li *ngFor="let item of authMenu"
         class="list-group-item"

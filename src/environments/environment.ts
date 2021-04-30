@@ -3,8 +3,19 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  mapboxToken: 'pk.eyJ1Ijoia2xlcml0aCIsImEiOiJja2puMHhrODI1NG95MnJwOTZldjAwd2xuIn0.qSVIwYh9D-wVyzUne3euog'
 };
+
+/*
+var mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
+mapboxgl.accessToken = 'pk.eyJ1IjoiYWx2YXJvMzMiLCJhIjoiY2tvMnprZHl3MDQwdjJ3bXhsdWN3emk0ZiJ9.VkveZ5NUuA0Mxo-xidTa2w';
+var map = new mapboxgl.Map({
+container: 'YOUR_CONTAINER_ELEMENT_ID',
+style: 'mapbox://styles/mapbox/streets-v11'
+});
+*/
+
 
 /*
  * For easier debugging in development mode, you can import the following file

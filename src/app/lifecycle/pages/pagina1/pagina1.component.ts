@@ -7,8 +7,15 @@ import { interval, Subscription } from 'rxjs';
   styles: [
   ]
 })
-export class Pagina1Component implements OnInit, OnChanges, DoCheck, AfterContentInit, 
-    AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
+export class Pagina1Component 
+  implements OnInit, 
+             OnChanges, 
+             DoCheck, 
+             AfterContentInit, 
+             AfterContentChecked, 
+             AfterViewInit, 
+             AfterViewChecked, 
+             OnDestroy {
 
   nombre: string = 'Fernando';
   segundos: number = 0;
@@ -19,6 +26,7 @@ export class Pagina1Component implements OnInit, OnChanges, DoCheck, AfterConten
   }
 
   ngOnChanges(changes: SimpleChanges): void {
+    //nunca se lanza porque no hay ningún @input
     console.log('ngOnChanges');
   }
   
@@ -51,7 +59,7 @@ export class Pagina1Component implements OnInit, OnChanges, DoCheck, AfterConten
 
   ngOnInit(): void {
     console.log('ngOnInit');
-    this.timerSubscription = interval(1000).subscribe( i => {
+    this.timerSubscription = interval(60000).subscribe( i => {
       this.segundos = i;
     })
   }

@@ -339,3 +339,9 @@ json-server --watch db.json
 
 ## LifeCycle Hooks  
 https://angular.io/guide/lifecycle-hooks  
+
+## Mapbox.com  
+https://www.mapbox.com/
+
+## Google.com/maps  
+https://www.google.com/maps  

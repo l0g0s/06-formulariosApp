@@ -19,6 +19,25 @@ interface MenuItem {
 })
 export class SidemenuComponent {
 
+  mapasMenu: MenuItem[] = [
+    {
+      ruta: './mapas/fullscreen',
+      texto: 'FullScreen'
+    },
+    {
+      ruta: './mapas/zoom-range',
+      texto: 'Zoom Range'
+    },
+    {
+      ruta: './mapas/marcadores',
+      texto: 'Marcadores'
+    },
+    {
+      ruta: './mapas/propiedades',
+      texto: 'Propiedades'
+    },
+  ];
+
   lifecycleMenu: MenuItem[] = [
     {
       texto: 'LifeCycle',

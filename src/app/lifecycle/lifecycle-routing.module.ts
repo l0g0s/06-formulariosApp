@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { Pagina1Component } from './pages/pagina1/pagina1.component';
+import { LifecycleComponent } from './lifecycle.component';
 
 const routes: Routes = [
   {
     path: '',
     children: [
-        { path: 'lifecycle', component: Pagina1Component },
+        { path: 'lifecycle', component: LifecycleComponent },
         { path: '**', redirectTo: 'lifecycle' },
     ]
   }
