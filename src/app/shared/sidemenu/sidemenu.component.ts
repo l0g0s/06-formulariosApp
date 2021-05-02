@@ -14,6 +14,9 @@ interface MenuItem {
       li {
         cursor:pointer;
       }
+      #mimenu {
+        height:100%
+      } 
     `
   ]
 })

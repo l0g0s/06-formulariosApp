@@ -6,9 +6,14 @@ import * as mapboxgl from 'mapbox-gl';
   templateUrl: './full-screen.component.html',
   styles: [
     `
+    #miapp {
+      height: 100% !Important;
+      width: 100% !Important;
+      margin-left: 0px !Important;
+    }
     #mapa {
       height: 100%;
-      width: 100%; 
+      width: 100%;
     }
     `
   ]
@@ -22,7 +27,7 @@ export class FullScreenComponent implements OnInit {
     var map = new mapboxgl.Map({
       container: 'mapa',
       style: 'mapbox://styles/mapbox/streets-v11',
-      center: [ -75.921029433568, 45.28719674822362 ],
+      center: [ -5.919880321802825, 37.287378593954855 ],
       zoom: 18
     });
 

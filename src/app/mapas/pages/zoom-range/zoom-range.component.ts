@@ -15,7 +15,7 @@ import * as mapboxgl from 'mapbox-gl';
       background-color: white;
       border-radius: 5px;
       bottom: 50px;
-      left: 50px;
+      left: 175px;
       padding: 10px;
       position: fixed;
       z-index: 999;
@@ -29,7 +29,7 @@ export class ZoomRangeComponent implements AfterViewInit, OnDestroy {
   @ViewChild('mapa') divMapa!: ElementRef;
   mapa!: mapboxgl.Map;
   zoomLevel: number = 10;
-  center: [number, number] = [ -75.921029433568, 45.28719674822362 ];
+  center: [number, number] = [ -5.919880321802825, 37.287378593954855 ];
 
   constructor() {}
 

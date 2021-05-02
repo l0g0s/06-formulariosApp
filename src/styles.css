@@ -1,12 +1,16 @@
 html, body {
     height: 100%;
-    width: 100%;
+    width: 99%;
 }
 
-
-app-menu,app-sidemenu {
+app-sidemenu {
     position: fixed;
-    top: 1px;
-    left: 20px;
-    z-index: 0;
+    top: 10px;
+    left: 10px;
+    z-index: 99999;
 }
+
+
+
+
+
