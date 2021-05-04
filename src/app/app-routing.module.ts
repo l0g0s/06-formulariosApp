@@ -3,6 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { 
+    path: 'graficas',
+    loadChildren: () => import('./graficas/graficas.module').then( m => m.GraficasModule )
+  },
+  { 
     path: 'mapas',
     loadChildren: () => import('./mapas/mapas.module').then( m => m.MapasModule )
   },
@@ -26,7 +30,7 @@ const routes: Routes = [
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule )
   },
-  { path: '**', redirectTo: 'mapas' }
+  { path: '**', redirectTo: 'lifecycle' }
 ];
 
 @NgModule({

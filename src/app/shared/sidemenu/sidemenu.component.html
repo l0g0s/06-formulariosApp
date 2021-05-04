@@ -1,6 +1,17 @@
 <div id="mimenu" class="overflow-auto">
-<h6 class="m-1">Mapas</h6>
-<ul class="list-group">
+
+<h6 class="m-1" (click)="graficas.hidden=!graficas.hidden">Graficas</h6>
+<ul class="list-group" #graficas hidden>
+    <li *ngFor="let item of graficasMenu"
+        class="list-group-item"
+        [routerLink]="[ item.ruta ]"
+        routerLinkActive="active">
+        {{ item.texto }}
+    </li>
+</ul>
+
+<h6 class="m-1" (click)="mapas.hidden=!mapas.hidden">Mapas</h6>
+<ul class="list-group" #mapas hidden>
     <li *ngFor="let item of mapasMenu"
         class="list-group-item"
         [routerLink]="[ item.ruta ]"
@@ -9,8 +20,8 @@
     </li>
 </ul>
 
-<h6 class="m-1">Selectors Paises</h6>
-<ul class="list-group">
+<h6 class="m-1" (click)="lifec.hidden=!lifec.hidden">lifecycle</h6>
+<ul class="list-group" #lifec hidden>
     <li *ngFor="let item of lifecycleMenu"
         class="list-group-item"
         [routerLink]="[ item.ruta ]"
@@ -19,8 +30,8 @@
     </li>
 </ul>
 
-<h6 class="m-1">Selectors Paises</h6>
-<ul class="list-group">
+<h6 class="m-1" (click)="selec.hidden=!selec.hidden">Selector Paises</h6>
+<ul class="list-group" #selec hidden>
     <li *ngFor="let item of selectorMenu"
         class="list-group-item"
         [routerLink]="[ item.ruta ]"
@@ -29,8 +40,8 @@
     </li>
 </ul>
 
-<h6 class="m-1">Template</h6>
-<ul class="list-group">
+<h6 class="m-1" (click)="templ.hidden=!templ.hidden">Template</h6>
+<ul class="list-group" #templ hidden>
     <li *ngFor="let item of templateMenu"
         class="list-group-item"
         [routerLink]="[ item.ruta ]"
@@ -39,8 +50,8 @@
     </li>
 </ul>
 
-<h6 class="m-1">Reactive</h6>
-<ul class="list-group">
+<h6 class="m-1" (click)="react.hidden=!react.hidden">Reactive</h6>
+<ul class="list-group" #react hidden>
     <li *ngFor="let item of reactiveMenu"
         class="list-group-item"
         [routerLink]="[ item.ruta ]"
@@ -49,8 +60,8 @@
     </li>
 </ul>
 
-<h6 class="m-1">Validaciones</h6>
-<ul class="list-group">
+<h6 class="m-1" (click)="auth.hidden=!auth.hidden">Validaciones</h6>
+<ul class="list-group" #auth hidden>
     <li *ngFor="let item of authMenu"
         class="list-group-item"
         [routerLink]="[ item.ruta ]"

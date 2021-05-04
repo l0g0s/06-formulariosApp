@@ -345,3 +345,11 @@ https://www.mapbox.com/
 
 ## Google.com/maps  
 https://www.google.com/maps  
+
+## Color hexadecimal aleatorio  
+https://gist.github.com/Klerith/a0d7f1daa5a80d35d620b4cc56d33774  
+`const color = "#xxxxxx".replace(/x/g, y=>(Math.random()*16|0).toString(16));`  
+
+## ng2-charts  
+https://valor-software.com/ng2-charts/  
+
