@@ -21,7 +21,7 @@ export class GraficaBarraComponent implements OnInit {
   ];
   
   public barChartType: ChartType = 'bar';
-  public barChartLegend = true;
+  @Input() barChartLegend = true;
 
   @Input() barChartData: ChartDataSets[] = [
     // { data: [ 65, 59, 80, 81, 56, 55, 40 ], label: 'Series A', backgroundColor: '#ED5F76', hoverBackgroundColor: 'red' },
@@ -33,7 +33,7 @@ export class GraficaBarraComponent implements OnInit {
 
   ngOnInit(): void {
     if ( this.horizontal ){
-      this.barChartType = 'bar';
+      this.barChartType = 'horizontalBar';
     }
   }
 
