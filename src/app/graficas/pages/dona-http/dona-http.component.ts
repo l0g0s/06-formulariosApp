@@ -11,11 +11,12 @@ import { GraficasService } from '../../services/graficas.service';
 })
 export class DonaHttpComponent implements OnInit {
 
+  error = false
   public doughnutChartLabels: Label[] = [
-    // 'Download Sales', 'In-Store Sales', 'Mail-Order Sales', 'Other'
+//    'Download Sales', 'In-Store Sales', 'Mail-Order Sales', 'Other'
   ];
   public doughnutChartData: MultiDataSet = [
-    // [350, 450, 100, 150]
+//    [350, 450, 100, 150]
   ];
   public doughnutChartType: ChartType = 'doughnut';
 
@@ -35,24 +36,23 @@ export class DonaHttpComponent implements OnInit {
 
   ngOnInit(): void {
 
-    // this.graficasService.getUsuariosRedesSociales()
-    //   .subscribe( data => {
-    //     console.log(data);
-    //     const labels = Object.keys( data );
-    //     const values = Object.values( data );
-
-    //     this.doughnutChartLabels = labels;
-    //     this.doughnutChartData.push( values );
-
-    //   });
-
     this.graficasService.getUsuariosRedesSocialesDonaData()
       .subscribe( ({ labels, values }) => {
-
+        this.error=false
         this.doughnutChartLabels = labels;
         this.doughnutChartData.push( values );
-
-      })
+      }, error => {
+        this.error=true
+      });
+    
+    // this.graficasService.getUsuariosRedesSociales()
+    //   .subscribe( data => {
+    //     this.error=false
+    //     this.doughnutChartLabels = Object.keys( data );
+    //     this.doughnutChartData.push( Object.values( data ) );
+    //   }, error => {
+    //     this.error=true
+    //   });
 
   }
 

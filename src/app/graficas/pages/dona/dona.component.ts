@@ -10,7 +10,9 @@ import { Color, Label, MultiDataSet } from 'ng2-charts';
 })
 export class DonaComponent {
 
-  public doughnutChartLabels: Label[] = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales', 'Other'];
+  public doughnutChartLabels: Label[] = [
+    'Download Sales', 'In-Store Sales', 'Mail-Order Sales', 'Other'
+  ];
   public doughnutChartData: MultiDataSet = [
     [350, 450, 100, 150]
   ];

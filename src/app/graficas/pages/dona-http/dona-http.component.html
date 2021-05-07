@@ -1,14 +1,20 @@
 <h1>Redes sociales más usadas</h1>
 <hr>
 
-<div *ngIf="doughnutChartData.length === 0; else divGrafica" 
-    class="alert alert-info">
-    Cargando Data....
-</div>
-
 <div class="row">
     <div class="col">
 
+        <div *ngIf="error" 
+            class="alert alert-warning">
+            Error http
+        </div>
+
+        <div *ngIf="!error && doughnutChartData.length === 0; else divGrafica" 
+            class="alert alert-info">
+            Cargando Data....
+        </div>
+        
+        <div>
         <ng-template #divGrafica>
             <div style="display: block">
                 <canvas baseChart
@@ -23,7 +29,7 @@
                 Información en billones usuarios
             </span>
         </ng-template>
-
+        </div>
 
     </div>
 </div>

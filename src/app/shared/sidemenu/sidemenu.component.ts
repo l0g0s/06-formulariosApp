@@ -22,6 +22,10 @@ interface MenuItem {
 })
 export class SidemenuComponent {
   
+  productosMenu: MenuItem[] = [
+    { ruta: '/productos/agregar', texto: 'Productos' },
+  ];
+
   graficasMenu: MenuItem[] = [
     { ruta: '/graficas/barra', texto: 'Barras' },
     { ruta: '/graficas/barra-doble', texto: 'Barras Dobles' },

@@ -1,5 +1,15 @@
 <div id="mimenu" class="overflow-auto">
 
+<h6 class="m-1" (click)="directivas.hidden=!directivas.hidden">Directivas</h6>
+<ul class="list-group" #directivas>
+    <li *ngFor="let item of productosMenu"
+        class="list-group-item"
+        [routerLink]="[ item.ruta ]"
+        routerLinkActive="active">
+        {{ item.texto }}
+    </li>
+</ul>
+
 <h6 class="m-1" (click)="graficas.hidden=!graficas.hidden">Graficas</h6>
 <ul class="list-group" #graficas hidden>
     <li *ngFor="let item of graficasMenu"
