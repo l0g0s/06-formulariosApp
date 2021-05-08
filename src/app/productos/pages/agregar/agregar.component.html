@@ -18,7 +18,8 @@
         <div class="col-auto">
             <span error-msg
                   [color]="color"
-                  [valido]="!tieneError('nombre')">
+                  [mensaje]="texto1"
+                  [hidden]="!tieneError('nombre')">
             </span>
         </div>
 
@@ -29,7 +30,7 @@
         <div class="col">
             <button class="btn btn-primary"
                     (click)="cambiarNombre()">
-                Guardar
+                Cambiar nombre
             </button>
 
             &nbsp;
