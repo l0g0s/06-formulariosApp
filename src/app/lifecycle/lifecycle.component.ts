@@ -3,7 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './lifecycle.component.html',
-  styleUrls: ['./lifecycle.component.css']
+  styles: [
+  ]
 })
 export class LifecycleComponent {
   mostrar: boolean = true;
